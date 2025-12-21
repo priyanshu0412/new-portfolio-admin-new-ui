@@ -1,5 +1,5 @@
-import { BlogComponent } from '@/components'
 import React from 'react'
+import { BlogComponent } from '@/components'
 import { FetchApi } from "@/utils/fetchAPI";
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
