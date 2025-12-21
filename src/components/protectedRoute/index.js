@@ -3,6 +3,8 @@ import { useSelector } from "react-redux";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 
+// ----------------------------------
+
 const ProtectedRoute = ({ children }) => {
     const router = useRouter();
     const isAuthenticated = useSelector(
