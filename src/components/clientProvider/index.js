@@ -4,6 +4,8 @@ import { Provider, useDispatch } from "react-redux";
 import { store } from "@/store/store";
 import { loginSuccess } from "@/store/auth/authSlice";
 
+// ---------------------------------
+
 const AuthInitializer = ({ children }) => {
     const dispatch = useDispatch();
 
