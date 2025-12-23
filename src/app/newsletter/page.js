@@ -1,8 +1,8 @@
 "use client"
 
+import React, { useState } from 'react'
 import { ReUseHeadingTitle, SelectRecipientsModal } from '@/components'
 import Link from 'next/link'
-import React, { useState } from 'react'
 import { useSelector } from 'react-redux';
 import Cookies from "js-cookie";
 import { Icon } from '@iconify/react';
@@ -24,8 +24,6 @@ const CreateNewsLetterPage = () => {
     const [content, setContent] = useState("");
     const [openRecipientModal, setOpenRecipientModal] = useState(false);
     const [editorLoaded, setEditorLoaded] = useState(false);
-
-
 
     const {
         register,

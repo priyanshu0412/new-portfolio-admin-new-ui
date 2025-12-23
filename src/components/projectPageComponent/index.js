@@ -1,4 +1,5 @@
 "use client"
+
 import React, { useState } from 'react'
 import DeleteModal from '../deleteModal'
 import Icon from '../icon'

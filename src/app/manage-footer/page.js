@@ -1,7 +1,7 @@
+import React from 'react'
 import { FooterPageComponent } from '@/components'
 import { FetchApi } from '@/utils/fetchAPI';
 import { redirect } from 'next/navigation';
-import React from 'react'
 
 // ---------------------------------------------
 

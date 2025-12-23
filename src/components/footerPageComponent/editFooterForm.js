@@ -1,7 +1,7 @@
 "use client";
 
-import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
+import Link from 'next/link';
 import ReUseHeadingTitle from '../reUseHeadingTitle';
 import Icon from '../icon';
 import { toast } from "react-hot-toast";

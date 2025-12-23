@@ -1,10 +1,11 @@
 "use client"
+
+import React, { useState } from 'react'
 import Icon from '@/components/icon'
 import ReUseHeadingTitle from '@/components/reUseHeadingTitle'
 import { FetchApi } from '@/utils/fetchAPI'
 import Image from 'next/image'
 import Link from 'next/link'
-import React, { useState } from 'react'
 import { useSelector } from 'react-redux'
 import Cookies from "js-cookie";
 import { useRouter } from 'next/navigation';

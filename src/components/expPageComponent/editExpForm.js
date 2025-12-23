@@ -1,6 +1,7 @@
 "use client"
-import Link from 'next/link'
+
 import React, { useState } from 'react'
+import Link from 'next/link'
 import Icon from '../icon'
 import ReUseHeadingTitle from '../reUseHeadingTitle'
 import { toast } from "react-hot-toast";

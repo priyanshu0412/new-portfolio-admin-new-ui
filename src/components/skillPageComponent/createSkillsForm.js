@@ -1,9 +1,9 @@
 "use client"
 
+import React, { useState } from 'react'
 import { FetchApi } from '@/utils/fetchAPI'
 import { Icon } from '@iconify/react'
 import Link from 'next/link'
-import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
 import { useForm, useFieldArray } from "react-hook-form";
 import Cookies from "js-cookie";

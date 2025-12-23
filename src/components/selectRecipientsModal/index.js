@@ -1,6 +1,7 @@
 "use client"
-import { FetchApi } from '@/utils/fetchAPI';
+
 import React, { useEffect, useState } from 'react'
+import { FetchApi } from '@/utils/fetchAPI';
 import { toast } from "react-hot-toast";
 
 // -----------------------------------

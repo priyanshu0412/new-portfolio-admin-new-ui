@@ -1,6 +1,6 @@
 "use client"
 import React from 'react'
-import { CreateBlogCategoryForm } from '@/components';
+import { CreateBlogCategoryForm, ProtectedRoute } from '@/components';
 
 // ------------------------------
 
@@ -8,7 +8,9 @@ const CreateBlogCategory = () => {
 
     return (
         <>
-            <CreateBlogCategoryForm />
+            <ProtectedRoute>
+                <CreateBlogCategoryForm />
+            </ProtectedRoute>
         </>
     )
 }

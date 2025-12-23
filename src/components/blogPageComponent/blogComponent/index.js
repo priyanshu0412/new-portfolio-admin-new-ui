@@ -1,11 +1,11 @@
 "use client"
 
+import React, { useState } from 'react'
 import DeleteModal from '@/components/deleteModal'
 import Icon from '@/components/icon'
 import ReUseHeadingTitle from '@/components/reUseHeadingTitle'
 import { FetchApi } from '@/utils/fetchAPI'
 import Link from 'next/link'
-import React, { useState } from 'react'
 import { useSelector } from 'react-redux'
 import Cookies from "js-cookie";
 import toast from "react-hot-toast";

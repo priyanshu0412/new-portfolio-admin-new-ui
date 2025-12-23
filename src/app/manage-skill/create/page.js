@@ -1,12 +1,14 @@
-import { CreateSkillsForm } from '@/components'
 import React from 'react'
+import { CreateSkillsForm, ProtectedRoute } from '@/components'
 
 // ---------------------------------
 
 const CreateSkillPage = () => {
     return (
         <>
-            <CreateSkillsForm />
+            <ProtectedRoute>
+                <CreateSkillsForm />
+            </ProtectedRoute>
         </>
     )
 }

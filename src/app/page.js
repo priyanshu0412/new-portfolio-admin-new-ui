@@ -1,4 +1,5 @@
 "use client"
+
 import { DashboardPageComponent, ProtectedRoute } from '@/components'
 import React from 'react'
 

@@ -1,12 +1,14 @@
 import React from 'react'
-import { CreateProjectForm } from '@/components'
+import { CreateProjectForm, ProtectedRoute } from '@/components'
 
 // --------------------------------------
 
 const CreateProjectPage = () => {
     return (
         <>
-            <CreateProjectForm />
+            <ProtectedRoute>
+                <CreateProjectForm />
+            </ProtectedRoute>
         </>
     )
 }

@@ -1,5 +1,5 @@
-import { CreateResumeForm, ProtectedRoute } from '@/components'
 import React from 'react'
+import { CreateResumeForm, ProtectedRoute } from '@/components'
 
 // -----------------------------------------
 

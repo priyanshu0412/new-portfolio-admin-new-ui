@@ -1,9 +1,10 @@
 "use client"
+
+import React, { useState } from 'react'
 import DeleteModal from '@/components/deleteModal'
 import ReUseHeadingTitle from '@/components/reUseHeadingTitle'
 import Icon from '../../icon';
 import Link from 'next/link'
-import React, { useState } from 'react'
 import { useSelector } from 'react-redux';
 import { FetchApi } from '@/utils/fetchAPI';
 import Cookies from "js-cookie";
