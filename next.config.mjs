@@ -7,17 +7,8 @@ const nextConfig = {
         hostname: "res.cloudinary.com",
       },
     ],
-    unoptimized: true,
-  },
-
-  async rewrites() {
-    return [
-      {
-        source: "/api/:path*",
-        destination: "https://api.priyanshudev.site/api/v1/:path*",
-      },
-    ];
-  },
+    unoptimized: true
+  }
 };
 
 export default nextConfig;
