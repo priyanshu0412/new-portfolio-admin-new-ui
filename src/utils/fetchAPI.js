@@ -1,24 +1,35 @@
-const base_url =
-    typeof window === "undefined"
-        ? "/api"
-        : process.env.NEXT_PUBLIC_BASE_URL;
+import { headers } from "next/headers";
 
+const getBaseUrl = () => {
+    // Client (browser)
+    if (typeof window !== "undefined") {
+        return process.env.NEXT_PUBLIC_BASE_URL;
+    }
+
+    // Server / build time
+    const h = headers();
+    const host = h.get("host");
+    const protocol = process.env.NODE_ENV === "development" ? "http" : "https";
+
+    return `${protocol}://${host}/api`;
+};
 
 // ---------------------------------------------
 
 export const FetchApi = async ({ url, method = "GET", data = null, token = null }) => {
     try {
+        const base_url = getBaseUrl();
         const fullUrl = `${base_url}${url}`;
 
-        const headers = {};
+        const headersObj = {};
         if (!(data instanceof FormData)) {
-            headers["Content-Type"] = "application/json";
+            headersObj["Content-Type"] = "application/json";
         }
-        if (token) headers["Authorization"] = `Bearer ${token}`;
+        if (token) headersObj["Authorization"] = `Bearer ${token}`;
 
         const options = {
             method: method.toUpperCase(),
-            headers,
+            headers: headersObj,
             credentials: "include",
             next: { tags: ["priyanshu-portfolio"] },
         };
@@ -48,4 +59,5 @@ export const FetchApi = async ({ url, method = "GET", data = null, token = null 
         };
     }
 };
+
 
