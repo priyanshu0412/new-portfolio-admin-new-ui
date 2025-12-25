@@ -11,6 +11,9 @@ const ManageBlog = async () => {
     const cookieStore = await cookies();
     const token = cookieStore.get("token")?.value;
 
+    console.log("SERVER TOKEN:", token);
+
+
     if (!token) redirect("/login");
 
     let blogs = [];
