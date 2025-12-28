@@ -145,7 +145,7 @@ const ExpPageComponent = ({ experience: experienceData }) => {
                                                 {item?.startYear}
                                             </td>
                                             <td className="p-4 text-sm text-gray-600">
-                                                {item?.endYear}
+                                                {item?.endYear || "Present"}
                                             </td>
 
                                             <td className="p-4 flex items-center gap-5">
