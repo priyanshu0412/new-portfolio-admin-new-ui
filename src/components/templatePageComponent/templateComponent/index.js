@@ -236,9 +236,7 @@ const TemplateComponent = ({ templates: templatesData }) => {
                     <div className="flex items-center justify-between px-6 py-3 bg-[#0F172A] text-white shadow-lg">
                         <div className="flex items-center gap-3">
                             <Icon icon="mdi:eye" className="text-xl" />
-                            <span className="text-sm font-semibold truncate max-w-md">
-                                {previewUrl}
-                            </span>
+                            <span className="text-sm font-semibold">Live Preview</span>
                         </div>
 
                         <button
