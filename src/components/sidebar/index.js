@@ -17,6 +17,7 @@ const Sidebar = () => {
     const [openUserMenu, setOpenUserMenu] = useState(false);
     const [openBlogs, setOpenBlogs] = useState(false);
     const [openSkills, setOpenSkills] = useState(false);
+    const [openTemplates, setOpenTemplates] = useState(false);
     const dispatch = useDispatch();
     const userAuth = useSelector((state) => state.auth.isAuthenticated);
 
@@ -191,6 +192,40 @@ const Sidebar = () => {
                                 width="22" />
                             <span>Resume</span>
                         </Link>
+                    </li>
+
+                    {/* My Templates */}
+                    <li className="text-white">
+                        <div
+                            onClick={() => setOpenTemplates(!openTemplates)}
+                            className={`flex items-center justify-between p-2 rounded hover:bg-gray-700 cursor-pointer`}
+                        >
+                            <div className="flex items-center gap-3">
+                                <Icon icon="mdi:puzzle-outline" width="22" />
+                                <span>My Templates</span>
+                            </div>
+                            <Icon
+                                icon={"mdi:chevron-down"}
+                                width="22"
+                                className={`transition-transform ${openTemplates ? "rotate-180" : ""}`}
+                            />
+                        </div>
+
+                        {/* Dropdown list */}
+                        {openTemplates && (
+                            <ul className="ml-10 flex flex-col mt-1 space-y-1">
+                                <Link
+                                    href={"/manage-template/category"}
+                                    className={`p-1.5 text-sm rounded hover:bg-gray-700 cursor-pointer ${pathname === "/manage-template/category" ? "bg-gray-700" : ""}`}>
+                                    Template Category
+                                </Link>
+                                <Link
+                                    href={"/manage-template/template"}
+                                    className={`p-1.5 text-sm rounded hover:bg-gray-700 cursor-pointer ${pathname === "/manage-template/template" ? "bg-gray-700" : ""}`}>
+                                    Template
+                                </Link>
+                            </ul>
+                        )}
                     </li>
 
                     {/* Footer */}
